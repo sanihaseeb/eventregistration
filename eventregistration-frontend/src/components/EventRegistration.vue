@@ -1,17 +1,12 @@
 <template>
   <div id="eventregistration">
     <h2>People</h2>
-   <table>
-  <tr v-for="person in people" >
-      <td>{{ person.name }}</td>
-      <td>
-        <ul>
-          <li v-for="event in person.events">
-            {{event.name}}
-          </li>
-        </ul>
-      </td>
-  </tr>
+    <table>
+      <tr>
+          <td>John</td>
+          <td>Event to attend</td>
+      </tr>
+  
   <tr>
     <td>
         <input type="text" v-model="newPerson" placeholder="Person Name">
@@ -20,19 +15,17 @@
         <button @click="createPerson(newPerson)">Create Person</button>
     </td>
   </tr>
-</table>
+
+      
+    </table>
     <p>
-     <span v-if="errorPerson" style="color:red">Error: {{errorPerson}} </span>
+      <span style="color:red">Error: Message text comes here</span>
     </p>
+  
   </div>
 </template>
-
-
-
 <script src="./registration.js">
 </script>
-
-
 <style>
   #eventregistration {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -40,3 +33,4 @@
     background: #f2ece8;
   }
 </style>
+
